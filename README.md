@@ -1,33 +1,33 @@
 # Calc—01
 
-Калькулятор в одном HTML-файле: клавиши как у Apple Magic Keyboard, стеклянные операторы из матового акрила, акриловый дисплей-«папка» на винтах и бумажная лента с историей.
+A calculator in a single HTML file: keys styled after the Apple Magic Keyboard, frosted glass operators, an acrylic "folder" display held by screws, and a paper tape that keeps your history.
 
-**Открыть:** https://vvallll.github.io/calc-01/
+**Open it:** https://vvallll.github.io/calc-01/
 
-## Что умеет
+## Features
 
-- Порядок действий и скобки (вложенные, незакрытые закрываются сами), степень `^`, факториал `!`, проценты, `√`, `x²`, `±`.
-- Повторное `=` повторяет последнее действие: `2 + 3 = 5`, потом `8`, `11`…
-- История на бумажной ленте: вытянуть, пролистать, нажать на строку, чтобы подставить результат. Кнопка `clear ×` очищает ленту.
-- Клик по дисплею копирует число.
-- Светлая и тёмная тема, звук нажатий, работает на телефоне.
+- Order of operations and brackets (nested; unclosed ones close themselves), power `^`, factorial `!`, percent, `√`, `x²`, `±`.
+- Pressing `=` again repeats the last step: `2 + 3 = 5`, then `8`, `11`…
+- History on a paper tape: pull it out, scroll through it, tap a row to reuse its result. The `clear ×` button wipes the tape.
+- Click the display to copy the number.
+- Light and dark themes, key sounds, works on phones.
 
-## Клавиатура
+## Keyboard
 
-| Клавиши | Действие |
+| Keys | Action |
 |---|---|
-| `0–9`, `.` или `,` | ввод числа |
-| `+` `−` `*` `/` | операции |
+| `0–9`, `.` or `,` | enter a number |
+| `+` `−` `*` `/` | operators |
 | `Shift` + `1` `5` `6` `8` `9` `0` | `!` `%` `^` `*` `(` `)` |
-| `Enter` или `=` | посчитать |
-| `Backspace` | стереть последнюю цифру |
-| `Esc` | очистить всё |
+| `Enter` or `=` | calculate |
+| `Backspace` | erase the last digit |
+| `Esc` | clear everything |
 | `F1`–`F4` | `±` `%` `√` `x²` |
-| `Cmd`/`Ctrl` + `C` | скопировать результат |
-| `T` `S` `H` `G` | тема, звук, лента, сетка |
+| `Cmd`/`Ctrl` + `C` | copy the result |
+| `T` `S` `H` `G` | theme, sound, tape, grid |
 
-На телефоне символы над цифрами вводятся долгим нажатием на клавишу.
+On a phone, long-press a key to enter the symbol printed above its digit.
 
-## Как устроено
+## How it's built
 
-Один файл `index.html` без сборки и зависимостей, шрифт Martian Mono подключается из Google Fonts. Чтобы запустить локально, достаточно открыть файл в браузере.
+One `index.html` file with no build step and no dependencies; the Martian Mono typeface loads from Google Fonts. To run it locally, just open the file in a browser.
