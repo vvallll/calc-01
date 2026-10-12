@@ -1,18 +1,18 @@
-# Calc—01
+# ✦ Calc—01
 
-A calculator in a single HTML file: keys styled after the Apple Magic Keyboard, frosted glass operators, an acrylic "folder" display held by screws, and a paper tape that keeps your history.
+A calculator in a single HTML file: keys styled after the Apple Magic Keyboard, frosted glass operators, an acrylic "folder" display held by screws, and a paper tape that keeps your history. ⋆｡°✩
 
-**Open it:** https://vvallll.github.io/calc-01/
+**⊹ Open it:** [Calc—01](https://vvallll.github.io/calc-01/)
 
-## Features
+### ⊹ Features
 
-- Order of operations and brackets (nested; unclosed ones close themselves), power `^`, factorial `!`, percent, `√`, `x²`, `±`.
-- Pressing `=` again repeats the last step: `2 + 3 = 5`, then `8`, `11`…
-- History on a paper tape: pull it out, scroll through it, tap a row to reuse its result. The `clear ×` button wipes the tape.
-- Click the display to copy the number.
-- Light and dark themes, key sounds, works on phones.
+- ✦ Order of operations and brackets (nested; unclosed ones close themselves), power `^`, factorial `!`, percent, `√`, `x²`, `±`.
+- ✦ Pressing `=` again repeats the last step: `2 + 3 = 5`, then `8`, `11`…
+- ✦ History on a paper tape: pull it out, scroll through it, tap a row to reuse its result. The `clear ×` button wipes the tape.
+- ✦ Click the display to copy the number.
+- ✦ Light and dark themes, key sounds, works on phones.
 
-## Keyboard
+### ⌨ Keyboard
 
 | Keys | Action |
 |---|---|
@@ -28,6 +28,10 @@ A calculator in a single HTML file: keys styled after the Apple Magic Keyboard, 
 
 On a phone, long-press a key to enter the symbol printed above its digit.
 
-## How it's built
+### ⊹ How it's built
 
 One `index.html` file with no build step and no dependencies; the Martian Mono typeface loads from Google Fonts. To run it locally, just open the file in a browser.
+
+### ♡ A little calculator
+
+`one file → no dependencies → a few calculations → a little bit of magic` ⊹
