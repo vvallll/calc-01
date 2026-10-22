@@ -1,10 +1,36 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
 <title>Calc—01</title>
+<meta name="description" content="A calculator with Apple Magic Keyboard keys, frosted glass operators, an acrylic display and a paper tape that keeps your history.">
+<link rel="canonical" href="https://vvallll.github.io/calc-01/">
+
+<!-- browser UI: light/dark form controls, address bar colour, no auto-linking of long numbers -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#e6e6e3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+
+<!-- icons: .ico for old browsers, SVG for the tab, PNG for iOS home screen, manifest for Android / install -->
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Calc—01">
+
+<!-- link previews in messengers and social networks -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calc—01">
+<meta property="og:description" content="A calculator with Apple Magic Keyboard keys, frosted glass operators, an acrylic display and a paper tape that keeps your history.">
+<meta property="og:url" content="https://vvallll.github.io/calc-01/">
+<meta property="og:image" content="https://vvallll.github.io/calc-01/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Calc—01 calculator showing 12 345.6 + 78 × 2 = 12 501.6">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap">
@@ -16,6 +42,9 @@
     if (t !== 'light' && t !== 'dark') t = root.dataset.theme;
     if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     root.dataset.theme = t;
+    // address bar follows the page theme, not only the system one
+    var bar = document.querySelectorAll('meta[name="theme-color"]');
+    for (var i = 0; i < bar.length; i++) bar[i].content = t === 'dark' ? '#111113' : '#e6e6e3';
   })();
 </script>
 <style>
@@ -1566,7 +1595,13 @@ button { font: inherit; color: inherit; }
     body.classList.toggle('mute', !soundOn);
   }
   function setTheme(t, origin) {
-    const apply = () => { root.dataset.theme = t; store.set('calc01-theme', t); syncLabels(); };
+    const apply = () => {
+      root.dataset.theme = t;
+      store.set('calc01-theme', t);
+      syncLabels();
+      const bg = getComputedStyle(root).getPropertyValue('--bg').trim();
+      $$('meta[name="theme-color"]').forEach(m => m.content = bg);
+    };
     if (!document.startViewTransition || reduced) { apply(); return; }
     const vt = document.startViewTransition(apply);
     vt.ready.then(() => {

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- app icon master: full-bleed blue acrylic "=" key; platforms add their own rounding or mask.
+       Everything that matters sits inside the central 80% so maskable crops keep it. -->
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2=".25" y2="1">
+      <stop offset="0" stop-color="#8ea6ff"/>
+      <stop offset="1" stop-color="#4a68ea"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="256" cy="-40" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pool" cx="256" cy="560" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ledGlow">
+      <stop offset="0" stop-color="#ff8a2a" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="lift" x="-20%" y="-60%" width="140%" height="220%">
+      <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#1c2f8f" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="url(#body)"/>
+  <rect width="512" height="512" fill="url(#sheen)"/>
+  <rect width="512" height="512" fill="url(#pool)"/>
+  <circle cx="370" cy="142" r="58" fill="url(#ledGlow)"/>
+  <circle cx="370" cy="142" r="14" fill="#ff8a2a"/>
+  <circle cx="366" cy="138" r="5" fill="#ffd6b0"/>
+  <g fill="#fff" filter="url(#lift)">
+    <rect x="128" y="178" width="256" height="52" rx="26"/>
+    <rect x="128" y="282" width="256" height="52" rx="26"/>
+  </g>
+</svg>
