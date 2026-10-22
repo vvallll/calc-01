@@ -21,12 +21,14 @@ Dark theme, with the paper tape pulled out:
 
 ![Calc—01 in the dark theme with the paper tape pulled out, showing five past calculations](screenshots/desktop-dark.jpg)
 
-On a phone: a pending `×` lights its orange LED, and `2 ^ 10 = 1 024` in the dark theme.
+On a phone, in light and dark:
 
 <p align="center">
-  <img src="screenshots/phone-light.jpg" alt="Calc—01 on a phone in the light theme, waiting for the second number after 1 024 ×" width="38%">
-  &nbsp;&nbsp;
-  <img src="screenshots/phone-dark.jpg" alt="Calc—01 on a phone in the dark theme showing 2 ^ 10 = 1 024" width="38%">
+  <img src="screenshots/phone-light.png" alt="Calc—01 on an iPhone in the light theme" width="30%">
+  &nbsp;
+  <img src="screenshots/phone-tape.png" alt="Calc—01 on an iPhone with the history tape pulled out" width="30%">
+  &nbsp;
+  <img src="screenshots/phone-dark.png" alt="Calc—01 on an iPhone in the dark theme" width="30%">
 </p>
 
 ### ⌨ Keyboard
